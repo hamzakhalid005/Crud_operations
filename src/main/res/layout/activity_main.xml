@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FIREBASE TASK"
+        android:id="@+id/heading"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#3b6978"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:id="@+id/nametv"
+        android:layout_below="@id/heading"
+        android:textSize="20sp"
+        android:textColor="#3b6978"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameET"
+        android:layout_below="@id/nametv"
+        android:hint="ENTER YOUR NAME"
+
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ROLL NUM"
+        android:id="@+id/rollTV"
+        android:layout_below="@id/nameET"
+        android:textSize="20sp"
+        android:textColor="#3b6978"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rollET"
+        android:layout_below="@id/rollTV"
+        android:hint="ENTER YOUR ROLL NUMBER"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SECTION"
+        android:id="@+id/sectionTV"
+        android:layout_below="@id/rollET"
+        android:textSize="20sp"
+        android:textColor="#3b6978"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sectionET"
+        android:layout_below="@id/sectionTV"
+        android:hint="ENTER YOUR NAME"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnsave"
+        android:layout_below="@+id/sectionET"
+        android:layout_marginTop="20dp"
+        android:text="SAVE"
+        android:layout_marginLeft="150dp"
+        android:textColor="@color/colorPrimary"
+        android:onClick="adddata"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/downloadedDataTV"
+        android:layout_below="@id/sectionET"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/getValuesBtn"
+        android:layout_below="@id/btnsave"
+        android:text="Get Values"
+        android:onClick="getValuesFromFirebaseFirestore"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/updateValuesBtn"
+        android:layout_below="@id/getValuesBtn"
+        android:text="Update Values"
+        android:onClick="updateDocumentFieldValue"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/deleteValuesBtn"
+        android:layout_below="@id/updateValuesBtn"
+        android:text="Delete Values"
+        android:onClick="deleteFieldFromCollectionDocument"/>
+
+
+        />
+
+</RelativeLayout>
